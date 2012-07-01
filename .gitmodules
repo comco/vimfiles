@@ -7,3 +7,9 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
+[submodule "bundle/dlang/syntax"]
+	path = bundle/dlang/syntax
+	url = https://github.com/JesseKPhillips/d.vim.git
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
