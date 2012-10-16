@@ -8,6 +8,6 @@ au GUIEnter * simalt ~x
 call pathogen#infect() 
 filetype plugin indent on 
 set number
-set tabstop=4
 set hidden
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
