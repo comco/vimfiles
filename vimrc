@@ -12,16 +12,18 @@ colorscheme zenburn
 
 " select a nice font
 if has('gui_running')
-	set guifont=Consolas:h10:cRUSSIAN
+    if has("gui_gtk2")
+        set guifont=DejaVu\ Sans\ Mono\ 12
+    else
+        set guifont=Consolas:h10:cRUSSIAN
+    endif
 endif
-
-" make gvim fullscreen
-set guioptions-=T
-au GUIEnter * simalt ~x
+" set guifont=Consolas\ 10
+" set guifont=Courier\ 10
 
 " initialize pathogen plugins
 call pathogen#infect() 
-
+call pathogen#helptags()
 
 filetype plugin indent on
 
@@ -32,7 +34,7 @@ set number
 set hidden
 
 " define some nice global indentation semantics
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " make backspace work as expected
 set backspace=indent,eol,start
@@ -50,3 +52,4 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " set the default file encoding
 set fileencodings=utf-8 encoding=utf-8
+
