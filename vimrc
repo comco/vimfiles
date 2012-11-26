@@ -29,6 +29,7 @@ filetype plugin indent on
 
 " show line numbers
 set number
+set ruler
 
 " hide buffers instead of closing them
 set hidden
@@ -47,7 +48,7 @@ set visualbell
 set noerrorbells
 
 " quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
+" nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " set the default file encoding
