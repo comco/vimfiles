@@ -1,6 +1,9 @@
 " stop pretending you're vi
 set nocompatible
 
+" maximize gvim window
+au GUIEnter * simalt ~x
+
 " turn the syntax highlighting on
 syntax on
 
