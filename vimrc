@@ -11,6 +11,7 @@ syntax on
 set hlsearch
 
 " select my favourite theme
+set t_Co=256
 colorscheme zenburn
 
 " select a nice font

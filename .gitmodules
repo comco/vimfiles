@@ -42,3 +42,6 @@
 	path = bundle/vim-clojure-static
 	url = https://github.com/guns/vim-clojure-static.git
     ignore = dirty
+[submodule "bundle/fireplace"]
+	path = bundle/fireplace
+	url = https://github.com/tpope/vim-fireplace.git
