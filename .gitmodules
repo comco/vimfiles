@@ -47,4 +47,4 @@
 	url = https://github.com/tpope/vim-fireplace.git
 [submodule "bundle/hs"]
 	path = bundle/hs
-	url = https://github.com/lukerandall/haskellmode-vim.git
+	url = https://github.com/dag/vim2hs.git
