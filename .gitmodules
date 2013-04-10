@@ -45,6 +45,6 @@
 [submodule "bundle/fireplace"]
 	path = bundle/fireplace
 	url = https://github.com/tpope/vim-fireplace.git
-[submodule "bundle/hs"]
-	path = bundle/hs
+[submodule "bundle/haskell"]
+	path = bundle/haskell
 	url = https://github.com/dag/vim2hs.git
