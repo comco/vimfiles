@@ -9,6 +9,7 @@ set hlsearch
 
 " select my favourite theme
 set t_Co=256
+let g:zenburn_old_Visual = 1
 let g:zenburn_alternative_Visual = 1
 colorscheme zenburn
 
