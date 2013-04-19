@@ -1,9 +1,6 @@
 " stop pretending you're vi
 set nocompatible
 
-" maximize gvim window
-au GUIEnter * simalt ~x
-
 " turn the syntax highlighting on
 syntax on
 
@@ -12,6 +9,7 @@ set hlsearch
 
 " select my favourite theme
 set t_Co=256
+let g:zenburn_alternative_Visual = 1
 colorscheme zenburn
 
 " select a nice font
@@ -22,8 +20,6 @@ if has('gui_running')
         set guifont=Consolas:h10:cRUSSIAN
     endif
 endif
-" set guifont=Consolas\ 10
-" set guifont=Courier\ 10
 
 " initialize pathogen plugins
 call pathogen#infect() 
@@ -51,10 +47,13 @@ set showmatch
 set visualbell
 set noerrorbells
 
-" quickly edit/reload the vimrc file
-" nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
 " set the default file encoding
 set fileencodings=utf-8 encoding=utf-8
 
+" changes cursor in different modes
+if has("autocmd")
+    au VimEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+    au VimLeave    * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+endif
