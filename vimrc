@@ -1,6 +1,5 @@
 " stop pretending you're vi
 set nocompatible
-" just a test
 
 " turn the syntax highlighting on
 syntax on
