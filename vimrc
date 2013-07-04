@@ -30,7 +30,6 @@ filetype plugin indent on
 
 " show line numbers
 set number
-set ruler
 
 " hide buffers instead of closing them
 set hidden
@@ -51,10 +50,8 @@ set noerrorbells
 " set the default file encoding
 set fileencodings=utf-8 encoding=utf-8
 
-" changes cursor in different modes
-if has("autocmd")
-    au VimEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-    au VimLeave    * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-endif
+" show current row and column
+set ruler
+
+" show the status line always
+set laststatus=2
